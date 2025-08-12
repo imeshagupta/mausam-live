@@ -75,7 +75,9 @@ function Hero({ weather, news }) {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-around",
-                    background: "rgba(255,255,255,0.15)",
+                    background: "rgba(50, 50, 50, 0.2)",
+                    backdropFilter: "blur(8px)",
+
                     padding: "20px",
                     borderRadius: "15px",
                     marginBottom: "20px",
@@ -102,7 +104,10 @@ function Hero({ weather, news }) {
                   <img
                     src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
                     alt={weather.weather[0].description}
-                    style={{ width: "120px" }}
+                    style={{
+                      width: "120px",
+                      filter: "brightness(1.2) saturate(1.2)",
+                    }}
                     className="mt-3 mt-md-0"
                   />
                 </div>
