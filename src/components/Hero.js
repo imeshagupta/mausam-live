@@ -41,13 +41,13 @@ function Hero({ weather, news }) {
               borderRadius: "20px",
               background: "rgba(255,255,255,0.1)",
               backdropFilter: "blur(10px)",
-              color: "#fff",
+              color: "#1d2832",
               boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
+              border: "2px solid rgba(133, 131, 130, 1)",
             }}
           >
             {weather && weather.main ? (
               <>
-                {/* Location */}
                 <h3
                   className="text-center mb-3"
                   style={{
@@ -66,10 +66,9 @@ function Hero({ weather, news }) {
                   className="text-center mb-4"
                   style={{ fontSize: "0.9rem", opacity: 0.85 }}
                 >
-                  {weather.coord.lat}°, {weather.coord.lon}°
+                  {/* {weather.coord.lat}°, {weather.coord.lon}° */}
                 </p>
 
-                {/* Main Weather Display */}
                 <div
                   className="d-flex flex-column flex-md-row align-items-center justify-content-around"
                   style={{
@@ -80,6 +79,7 @@ function Hero({ weather, news }) {
                     padding: "20px",
                     borderRadius: "15px",
                     marginBottom: "20px",
+                    border: "2px solid rgba(133, 131, 130, 1)",
                   }}
                 >
                   <div className="text-center text-md-start">
@@ -95,7 +95,7 @@ function Hero({ weather, news }) {
                     <p style={{ fontSize: "1.2rem", margin: 0 }}>
                       {weather.weather[0].main}
                     </p>
-                    <small style={{ opacity: 0.8 }}>
+                    <small style={{ opacity: 1.0 }}>
                       Feels like {weather.main.feels_like}°C
                     </small>
                   </div>
